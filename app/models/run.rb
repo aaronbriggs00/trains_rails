@@ -12,7 +12,7 @@ class Run < ApplicationRecord
         
         page = options[:page] || 1
         pagination_size = 5
-        rows_skipped = pagination_size * (options[:page].to_i - 1)
+        rows_skipped = pagination_size * (page.to_i - 1)
 
         order(sort_by => order).slice(rows_skipped, pagination_size)
     }
