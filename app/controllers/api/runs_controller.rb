@@ -8,7 +8,7 @@ class Api::RunsController < ApplicationController
             order: params[:order],
             page: params[:page]
         }
-        @runs = Run.sort_with_index(options)
+        @runs = Run.sort_with_cursor(options)
         render json: { runs: @runs }, status: :ok
     end
     
