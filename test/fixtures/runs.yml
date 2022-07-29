@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line: MyString
+  route: MyString
+  run_number: MyString
+  operator_id: MyString
+
+two:
+  line: MyString
+  route: MyString
+  run_number: MyString
+  operator_id: MyString
