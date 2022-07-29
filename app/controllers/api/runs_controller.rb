@@ -3,7 +3,12 @@ class Api::RunsController < ApplicationController
     skip_before_action :verify_authenticity_token
 
     def index
-        @runs = Run.all
+        options = {
+            sort_by: params[:sort_by],
+            order: params[:order],
+            page: params[:page]
+        }
+        @runs = Run.sort_with_index(options)
         render json: { runs: @runs }, status: :ok
     end
     
